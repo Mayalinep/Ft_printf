@@ -6,7 +6,7 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 13:29:02 by mpelage           #+#    #+#             */
-/*   Updated: 2024/06/09 16:53:08 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/06/14 15:48:42 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	ft_printf(const char *str, ...)
 
 	va_start(args, str);
 	count = 0;
+	if (!str)
+		return (va_end(args), -1);
 	while (*str)
 	{
 		if (*str != '%')
